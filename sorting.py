@@ -16,7 +16,7 @@ def print_data(dataset,opt):
             
     ts=time.time()
     with open(f"PID_{opt.upper()}_{ts}.csv", 'w', newline='') as file:
-        writer=csv.writer(file)
+        writer=csv.writer(file, delimiter=';')
         writer.writerows(new_csv)
     
     for lin in data:
